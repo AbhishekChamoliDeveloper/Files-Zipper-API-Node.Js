@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "6b761a8c-ce27-4744-8806-6e2ab081952b",
+		"name": "files-zipper-api",
+		"description": "An Powerful API to convert files to a zip folder.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21391219"
+	},
+	"item": [
+		{
+			"name": "Upload Files ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/C:/Users/hp/Downloads/screen-capture.mp4"
+						},
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/C:/Users/hp/Downloads/screen-capture.webm"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"upload"
+					],
+					"query": [
+						{
+							"key": "files",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "files",
+							"value": null,
+							"disabled": true
+						}
+					]
+				},
+				"description": "This Route is use to upload files to the server. You can add any numbers of files you want for creating a zip."
+			},
+			"response": [
+				{
+					"name": "Upload Files",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/hp/Downloads/Kuldeep_Bhatt_New (1).pdf"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/hp/Downloads/Frontend assignment 2.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"upload"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "72"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"48-09hfD0zajWxnOikbBOulTgEUhJw\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Sep 2023 10:33:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"url\": \"http://localhost:3000/70d240b0-8d9c-455f-942b-6702d8d6ad48.zip\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Zip File",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/8fa541fd-6171-44a9-bb30-43089604d068.zip",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"8fa541fd-6171-44a9-bb30-43089604d068.zip"
+					]
+				},
+				"description": "This route will help you to directly downlaod you zip file. Just give your zip file name you got from upload route and download it using this route."
+			},
+			"response": []
+		}
+	]
+}
